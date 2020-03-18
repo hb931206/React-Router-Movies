@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SavedList = props => (
   <div className="saved-list">
@@ -6,22 +7,11 @@ const SavedList = props => (
     {props.list.map(movie => (
       <span className="saved-movie">{movie.title}</span>
     ))}
-    <button
-      onClick={() => {
-        props.history.push("/");
-      }}
-      className="home-button"
-    >
-      Home
-    </button>
+
+    <Link to={`/`}>
+      <button className="home-button">Home</button>
+    </Link>
   </div>
 );
 
 export default SavedList;
-// {/* <button
-//         onClick={() => {
-//           props.history.push("/items-list");
-//         }}
-//         className="md-button shop-button"
-//       >
-//         Shop now! */}
