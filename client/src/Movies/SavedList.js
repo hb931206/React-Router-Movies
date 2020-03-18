@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const SavedList = props => (
   <div className="saved-list">
@@ -6,8 +6,22 @@ const SavedList = props => (
     {props.list.map(movie => (
       <span className="saved-movie">{movie.title}</span>
     ))}
-    <div className="home-button">Home</div>
+    <button
+      onClick={() => {
+        props.history.push("/");
+      }}
+      className="home-button"
+    >
+      Home
+    </button>
   </div>
 );
 
 export default SavedList;
+// {/* <button
+//         onClick={() => {
+//           props.history.push("/items-list");
+//         }}
+//         className="md-button shop-button"
+//       >
+//         Shop now! */}

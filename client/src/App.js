@@ -20,7 +20,7 @@ const App = () => {
       <Route
         path="/movies/:id"
         render={props => {
-          return <Movie List={savedList} {...props} />;
+          return <Movie movie={savedList} {...props} />;
         }}
       />
     </div>
